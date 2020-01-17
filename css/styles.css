@@ -1,0 +1,90 @@
+/*El codigo body y main lo tomamos de materialize, y normalamente no se puede combinar bootstrap
+y materialize pero como solo tiene las clases de body y main y ninguna exclusiva de materialize
+sí funciona*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.nav, nav, .jumbotron, .accordion .card, .negro{
+	background-color: black;
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navbar-brand{
+	width: 130px;
+	height: auto;
+	/*para que el logo quedé más arriba de la navbar o a la altura de serach...*/
+	position: relative;
+	bottom: 7vh;
+}
+
+.navbar .collapse .navbar-nav .active a{
+	color: red;
+}
+
+h6, button{
+	font-family: Calibri, sans-serif;
+}
+
+#azul{
+	/*height: 70vh;*/
+	display: inline-block;
+}
+
+#azul h1{
+	font-size: 100px;
+	font-family: fantasy;
+	color: white;
+	animation-name: huno;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in;
+}
+
+@keyframes huno{
+	0%{
+		transform: rotate(20deg);
+	}
+
+	50%{
+	}
+
+	100%{
+		transform: rotate(-20deg);
+	}
+}
+
+/*main-promociones*/
+
+.amarillo{
+	background-image: url(../img/warning2.jpg);
+	height: 40px;
+	animation-name: slide;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes slide{
+	100%{
+		/*Para que el fondo se mueva sólo horizontalmente*/
+		/*el signo negativo es para que se mueva a la izquierda*/
+		background-position-x: -500px;
+	}
+}
+
+.bread{
+	background-color: white;
+}
+
+iframe{
+	width: 90%;
+}
